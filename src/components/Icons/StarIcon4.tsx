@@ -1,10 +1,12 @@
-import { IconProps, svgBaseProps } from '../../utils/svgBaseProps'
+import { IconProps, getSvgBaseProps } from '../../utils/svgBaseProps'
 
-const StarIcon3 = (props: IconProps) => {
+const StarIcon4 = (props: IconProps) => {
   const {
     color,
     fontSize = '32px'
   } = props
+
+  const svgBaseProps = getSvgBaseProps('star')
 
   return (
     <svg {...svgBaseProps} {...props} color={color} fontSize={fontSize} viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
@@ -13,4 +15,4 @@ const StarIcon3 = (props: IconProps) => {
   )
 }
 
-export default StarIcon3
+export default StarIcon4

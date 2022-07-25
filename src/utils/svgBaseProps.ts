@@ -22,3 +22,15 @@ export const svgBaseProps = {
   ...svgAttrs,
   style: svgStyles,
 }
+
+/**
+ * Returns the props and styles needed for every svg element.
+ * @param {number} iconName The icon name used to create a data-testid
+ * @returns {object} An object with svg props and styles
+ */
+export const getSvgBaseProps = (iconName: string) => ({
+  focusable: false,
+  "aria-hidden": true,
+  "data-testid": `${iconName}Icon`,
+  style: svgStyles,
+})
