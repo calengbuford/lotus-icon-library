@@ -1,8 +1,10 @@
-import StarIcon from '../components/StarIcon'
 import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs'
+import StarIcon2 from '../components/Icons/StarIcon2'
+import StarIcon4 from '../components/Icons/StarIcon4'
+import StarIcon from '../components/Icons/StarIcon'
 
 <Meta
-  title="SVGs/StarIcon"
+  title="Icons/StarIcon"
   component={StarIcon}
   parameters={{
     backgrounds: {
@@ -53,6 +55,10 @@ import { StarIcon } from '@neiybor/lotus-icon-library'
     <div style={{ display: 'flex', gap: 20, alignItems: 'center' }}>
       <StarIcon color="red" />
       <StarIcon fontSize="100px" />
+      <StarIcon2 />
+      {/* <StarIcon3 color="blue" /> */}
+      <StarIcon4 color="green" />
+      <StarIcon4 color="purple" fontSize="50px" />
     </div>
   </Story>
 </Canvas>
