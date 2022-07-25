@@ -1,4 +1,4 @@
-import { ReactComponent as StarSVG } from '../../svgs/star.svg'
+import { ReactComponent as StarSVG } from '../../../svgs/star.svg'
 import BaseIcon, { IconProps } from '../../BaseIcon'
 
 const StarIcon = (props: IconProps) => {
