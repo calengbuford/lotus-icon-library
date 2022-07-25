@@ -1,12 +1,14 @@
 export type IconProps = {
+  /**
+   * The color of the component.
+   * @default 'currentColor'
+   */
   color?: string
+    /**
+   * The size of the component.
+   * @default '32px'
+   */
   fontSize?: string
-}
-
-const svgAttrs = {
-  focusable: false,
-  "aria-hidden": true,
-  "data-testid": 'starIcon',
 }
   
 const svgStyles = {
@@ -16,11 +18,6 @@ const svgStyles = {
   display: 'inline-block',
   flexShrink: 0,
   // transition: 'fill ...'
-}
-
-export const svgBaseProps = {
-  ...svgAttrs,
-  style: svgStyles,
 }
 
 /**
