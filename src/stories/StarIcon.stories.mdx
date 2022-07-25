@@ -1,4 +1,6 @@
 import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs'
+import StarIcon3 from '../components/Icons/StarIcon3'
+import StarIcon5 from '../components/Icons/StarIcon5'
 import { StarIcon, StarIcon2, StarIcon4 } from '../.'
 
 <Meta
@@ -20,7 +22,7 @@ import { StarIcon, StarIcon2, StarIcon4 } from '../.'
   }}
 />
 
-export const Template = (args) => <StarIcon {...args} />
+export const Template = (args) => <StarIcon5 {...args} />
 
 # StarIcon
 
@@ -51,10 +53,12 @@ import { StarIcon } from '@neiybor/lotus-icon-library'
 <Canvas>
   <Story name="Variants">
     <div style={{ display: 'flex', gap: 20, alignItems: 'center' }}>
-      <StarIcon color="red" />
-      <StarIcon2 />
+      {/* <StarIcon color="red" /> */}
+      {/* <StarIcon2 /> */}
       {/* <StarIcon3 color="blue" /> */}
-      <StarIcon4 color="#0079E1" fontSize="50px" />
+      {/* <StarIcon4 color="#0079E1" fontSize="50px" /> */}
+      <StarIcon5 />
+      <StarIcon5 color="gold" fontSize="100px" />
     </div>
   </Story>
 </Canvas>

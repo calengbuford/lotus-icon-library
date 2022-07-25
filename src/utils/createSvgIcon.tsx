@@ -1,25 +1,29 @@
+import React, { memo } from 'react';
+import SvgIcon, { IconProps, SvgProps } from '../components/SvgIcon';
+import { merge } from 'lodash'
 
-// export const createSvgIcon = (SVGComponent?: React.FunctionComponent<React.SVGProps<SVGSVGElement> & {
-//     title?: string | undefined;
-//   }>) => {
-// export const createSvgIcon = (SVGComponent: JSX.Element) => {
-export const createSvgIcon = (SVGComponent: React.FunctionComponent<React.SVGProps<SVGSVGElement>>) => {
-  const svgAttrs = {
-    focusable: false,
-    "aria-hidden": true,
-    "data-testid": 'starIcon',
-  }
-    
-  const svgStyles = {
-  userSelect: 'none' as 'auto'|'none'|'text'|'all',
-  width: '1em',
-  height: '1em',
-  display: 'inline-block',
-  flexShrink: 0,
-  // transition: 'fill ...'
+/**
+ * Builds and returns a react, SVG, memoized component.
+ * @param {React.ReactNode} path The path for the svg element
+ * @param {SvgProps} svgProps Additional props for the svg level of the component
+ * @param {string} displayName The icon name used for testing and local development
+ * @returns {React.MemoExoticComponent} A react, SVG, memoized component
+ */
+export default function createSvgIcon(path: React.ReactNode, svgProps: SvgProps, displayName: string) {
+  const Component = (props: IconProps) => {
+    const _props = merge(svgProps, props)
+    return (
+      <SvgIcon data-testid={`${displayName}Icon`} {..._props}>
+        {path}
+      </SvgIcon>
+    )
   }
 
-  // return <SVGComponent {...svgAttrs} style={svgStyles} color={color} fontSize={fontSize} />
-  return <SVGComponent {...svgAttrs} style={svgStyles} />
-  // return <SVGComponent />
+  if (process.env.NODE_ENV !== 'production') {
+    // Need to set `displayName` on the inner component for React.memo.
+    // React prior to 16.14 ignores `displayName` on the wrapper.
+    Component.displayName = `${displayName}Icon`
+  }
+
+  return memo(Component)
 }
