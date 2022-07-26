@@ -1,9 +1,9 @@
 import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs'
-import StarIcon from '../components/StarIcon'
+import StairsStrikeIcon from '../components/StairsStrikeIcon'
 
 <Meta
-  title="Icons/StarIcon"
-  component={StarIcon}
+  title="Icons/StairsStrikeIcon"
+  component={StairsStrikeIcon}
   parameters={{
     backgrounds: {
       default: 'lightGray',
@@ -20,16 +20,16 @@ import StarIcon from '../components/StarIcon'
   }}
 />
 
-export const Template = (args) => <StarIcon {...args} />
+export const Template = (args) => <StairsStrikeIcon {...args} />
 
-# StarIcon
+# StairsStrikeIcon
 
-<Description of={StarIcon} />
+<Description of={StairsStrikeIcon} />
 
 ### Import
 
 ```ts
-import { StarIcon } from '@neiybor/lotus-icon-library'
+import { StairsStrikeIcon } from '@neiybor/lotus-icon-library'
 ```
 
 ### Basic
@@ -51,8 +51,8 @@ import { StarIcon } from '@neiybor/lotus-icon-library'
 <Canvas>
   <Story name="Variants">
     <div style={{ display: 'flex', gap: 20 }}>
-      {/* <StarIcon color="gold" fontSize="100px" /> */}
-      <StarIcon />
+      {/* <StairsStrikeIcon color="gold" fontSize="100px" /> */}
+      <StairsStrikeIcon />
     </div>
   </Story>
 </Canvas>

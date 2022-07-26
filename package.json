@@ -10,6 +10,7 @@
     "@types/node": "^16.11.45",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
+    "eslint-plugin-prettier": "^4.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -66,5 +67,11 @@
     "babel-plugin-named-exports-order": "^0.0.2",
     "prop-types": "^15.8.1",
     "webpack": "^5.73.0"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "tabWidth": 2,
+    "singleQuote": true,
+    "trailingComma": "es5"
   }
 }

@@ -29,6 +29,7 @@ const svgStyles = {
   height: '1em',
   display: 'inline-block',
   flexShrink: 0,
+  border: '1px solid red'
   // transition: 'fill ...'
 }
     

@@ -1,9 +1,9 @@
 import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs'
-import StarIcon from '../components/StarIcon'
+import TiktokIcon from '../components/TiktokIcon'
 
 <Meta
-  title="Icons/StarIcon"
-  component={StarIcon}
+  title="Icons/TiktokIcon"
+  component={TiktokIcon}
   parameters={{
     backgrounds: {
       default: 'lightGray',
@@ -20,16 +20,16 @@ import StarIcon from '../components/StarIcon'
   }}
 />
 
-export const Template = (args) => <StarIcon {...args} />
+export const Template = (args) => <TiktokIcon {...args} />
 
-# StarIcon
+# TiktokIcon
 
-<Description of={StarIcon} />
+<Description of={TiktokIcon} />
 
 ### Import
 
 ```ts
-import { StarIcon } from '@neiybor/lotus-icon-library'
+import { TiktokIcon } from '@neiybor/lotus-icon-library'
 ```
 
 ### Basic
@@ -51,8 +51,8 @@ import { StarIcon } from '@neiybor/lotus-icon-library'
 <Canvas>
   <Story name="Variants">
     <div style={{ display: 'flex', gap: 20 }}>
-      {/* <StarIcon color="gold" fontSize="100px" /> */}
-      <StarIcon />
+      {/* <TiktokIcon color="gold" fontSize="100px" /> */}
+      <TiktokIcon />
     </div>
   </Story>
 </Canvas>

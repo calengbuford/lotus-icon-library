@@ -1,0 +1,61 @@
+import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs'
+import StairsStrikeIcon, { displayName as stairsStrikeName } from "../components/StairsStrikeIcon"
+import StarIcon, { displayName as starName } from "../components/StarIcon"
+import TiktokIcon, { displayName as tiktokName } from "../components/TiktokIcon"
+import WalkingIcon, { displayName as walkingName } from "../components/WalkingIcon"
+import WalkingFilledIcon, { displayName as walkingFilledName } from "../components/WalkingFilledIcon"
+
+<Meta
+  title="IconGallery"
+  component={TiktokIcon}
+  parameters={{
+    backgrounds: {
+      default: 'lightGray',
+      values: [{ name: 'lightGray', value: '#eee' }],
+    },
+  }}
+  argTypes={{
+    color: {
+      control: false,
+    },
+    fontSize: {
+      control: false,
+    },
+  }}
+/>
+
+# Icon Gallery
+
+export const styles = ({ display: 'flex', alignItems: 'center', flexDirection: 'column' })
+
+<Canvas>
+  <Story name="Gallery">
+    <div style={{ display: 'grid', gridGap: 20, gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))', width: '100vh' }}>
+      <div style={styles}><TiktokIcon />{tiktokName}</div>
+      <div style={styles}><StarIcon />{starName}</div>
+      <div style={styles}><WalkingIcon />{walkingName}</div>
+      <div style={styles}><WalkingFilledIcon />{walkingFilledName}</div>
+      <div style={styles}><StairsStrikeIcon />{stairsStrikeName}</div>
+           <div style={styles}><TiktokIcon />{tiktokName}</div>
+      <div style={styles}><StarIcon />{starName}</div>
+      <div style={styles}><WalkingIcon />{walkingName}</div>
+      <div style={styles}><WalkingFilledIcon />{walkingFilledName}</div>
+      <div style={styles}><StairsStrikeIcon />{stairsStrikeName}</div>
+           <div style={styles}><TiktokIcon />{tiktokName}</div>
+      <div style={styles}><StarIcon />{starName}</div>
+      <div style={styles}><WalkingIcon />{walkingName}</div>
+      <div style={styles}><WalkingFilledIcon />{walkingFilledName}</div>
+      <div style={styles}><StairsStrikeIcon />{stairsStrikeName}</div>
+           <div style={styles}><TiktokIcon />{tiktokName}</div>
+      <div style={styles}><StarIcon />{starName}</div>
+      <div style={styles}><WalkingIcon />{walkingName}</div>
+      <div style={styles}><WalkingFilledIcon />{walkingFilledName}</div>
+      <div style={styles}><StairsStrikeIcon />{stairsStrikeName}</div>
+           <div style={styles}><TiktokIcon />{tiktokName}</div>
+      <div style={styles}><StarIcon />{starName}</div>
+      <div style={styles}><WalkingIcon />{walkingName}</div>
+      <div style={styles}><WalkingFilledIcon />{walkingFilledName}</div>
+      <div style={styles}><StairsStrikeIcon />{stairsStrikeName}</div>
+    </div>
+  </Story>
+</Canvas>
