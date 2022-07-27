@@ -10,9 +10,9 @@ export type IconProps = {
   color?: string
   /**
    * The size of the component.
-   * @default '32px'
+   * @default 'medium'
    */
-  fontSize?: string
+  fontSize?: 'inherit' | 'small' | 'medium' | 'large'
 }
 
 export type SvgProps = {
@@ -30,14 +30,14 @@ const svgStyles = {
   display: 'inline-block',
   flexShrink: 0,
   border: '1px solid red'
-  // transition: 'fill ...'
+  // transition: ${theme.transitions.create('fill')};
 }
     
 const SvgIcon = (props: IconProps & SvgProps) => {
   const {
     children,
     color = 'inherit',
-    fontSize = '32px',
+    fontSize = 'medium',
     fillRule,
   } = props;
 
@@ -46,7 +46,12 @@ const SvgIcon = (props: IconProps & SvgProps) => {
     fill="currentColor"
     style={svgStyles}
     color={color}
-    fontSize={fontSize}
+    fontSize={{
+      inherit: 'inherit',
+      small: '1.25rem',
+      medium: '1.5rem',
+      large: '2.1875rem',
+    }[fontSize]}
     focusable={false}
     aria-hidden={true}
     fillRule={fillRule}
